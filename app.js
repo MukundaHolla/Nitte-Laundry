@@ -7,8 +7,9 @@ function loginbtn() {
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
 		  var user = result.user;
-		  
+		  console.log(user.displayName)
 		  // ...
+		  ShowUserPage();
 		}).catch(function(error) {
 		  // Handle Errors here.
 		  var errorCode = error.code;
@@ -19,4 +20,8 @@ function loginbtn() {
 		  var credential = error.credential;
 		  // ...
 		});
+}
+
+function ShowUserPage(){
+	$("#logincard").hide();
 }
